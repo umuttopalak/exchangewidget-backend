@@ -25,15 +25,13 @@ var (
 
 func main() {
 	go connectAndRetry()
+	go periodicTask() // Yeni eklenen goroutine
 
 	r := gin.Default()
 
 	r.GET("/api/symbol-data", getAllSymbolData)
-
 	r.GET("/api/symbol-data/:symbol", getSymbolData)
-
 	r.POST("/api/symbol", addSymbol)
-
 	r.DELETE("/api/symbol/:symbol", removeSymbol)
 
 	r.Run(":8080")
@@ -47,6 +45,29 @@ func connectAndRetry() {
 			time.Sleep(5 * time.Second)
 		}
 	}
+}
+
+func periodicTask() {
+	ticker := time.NewTicker(10 * time.Minute)
+	defer ticker.Stop()
+
+	for {
+		select {
+		case <-ticker.C:
+			fmt.Println("10 dakikalık periyodik görev tetiklendi.")
+			performPeriodicOperation()
+		}
+	}
+}
+
+func performPeriodicOperation() {
+	// Örneğin, tüm sembolleri yeniden bağlamak
+	dataMutex.Lock()
+	defer dataMutex.Unlock()
+	for symbol := range latestData {
+		tradingviewsocket.AddSymbol(symbol)
+	}
+	fmt.Println("Periyodik operasyon gerçekleştirildi.")
 }
 
 func adjustPriceWithScale(price float64, priceScale int) float64 {
