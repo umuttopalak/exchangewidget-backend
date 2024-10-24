@@ -25,7 +25,7 @@ var (
 
 func main() {
 	go connectAndRetry()
-	go periodicTask() // Yeni eklenen goroutine
+	go periodicTask()
 
 	r := gin.Default()
 

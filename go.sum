@@ -68,6 +68,8 @@ github.com/ugorji/go/codec v1.2.12 h1:9LC83zGrHhuUA9l16C9AHXAqEV/2wBQ4nkvumAE65E
 github.com/ugorji/go/codec v1.2.12/go.mod h1:UNopzCgEMSXjBc6AOMqYvWC1ktqTAfzJZUZgYf6w6lg=
 github.com/umuttopalak/tradingview-scraper v1.0.3 h1:fV3R5Z7gBSZE6suwRkVI8aHGd6zqdmfgO4iuYYBwtng=
 github.com/umuttopalak/tradingview-scraper v1.0.3/go.mod h1:BgTeCw/6PUNtuGdhSK2fHNnSw7BoD5IYC2/o9vX+2os=
+github.com/umuttopalak/tradingview-scraper v1.0.4 h1:yG9PXpWsTUNuaOhzyPmIHSB65CPUCiOJ3hg4MVOch5M=
+github.com/umuttopalak/tradingview-scraper v1.0.4/go.mod h1:BgTeCw/6PUNtuGdhSK2fHNnSw7BoD5IYC2/o9vX+2os=
 golang.org/x/arch v0.11.0 h1:KXV8WWKCXm6tRpLirl2szsO5j/oOODwZf4hATmGVNs4=
 golang.org/x/arch v0.11.0/go.mod h1:FEVrYAQjsQXMVJ1nsMoVVXPZg6p2JE2mx8psSWTDQys=
 golang.org/x/crypto v0.28.0 h1:GBDwsMXVQi34v5CCYUm2jkJvu4cbtru2U4TN2PSyQnw=
